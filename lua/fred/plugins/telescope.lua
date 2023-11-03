@@ -4,6 +4,7 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+		--{ "nvim-telescope/telescope-fzy-native.nvim" },
 		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
@@ -23,6 +24,7 @@ return {
 		})
 
 		telescope.load_extension("fzf")
+		-- telescope.load_extension("fzy_native")
 
 		local keymap = vim.keymap
 		keymap.set("n", "<leader>fb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", { desc = "Fuzzy find in current buffer" })
